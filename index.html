@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleWear - Online Clothing Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400?text=Welcome+to+StyleWear');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background-color: white;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #555;
+        }
+
+        .contact {
+            padding: 30px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>StyleWear</h1>
+    <p>Your Fashion, Your Way</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    Discover the Latest Fashion Trends
+</section>
+
+<section class="products">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x300?text=Men's+Jacket" alt="Men's Jacket">
+        <h3>Men's Jacket</h3>
+        <p>$59.99</p>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x300?text=Women's+Dress" alt="Women's Dress">
+        <h3>Women's Dress</h3>
+        <p>$49.99</p>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x300?text=Kids+T-Shirt" alt="Kids T-Shirt">
+        <h3>Kids T-Shirt</h3>
+        <p>$19.99</p>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@stylewear.com</p>
+    <p>Phone: +1 234 567 8900</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 StyleWear. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
