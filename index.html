@@ -1,144 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StyleWear - Online Clothing Store</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fresh Seafood Market - Buy Seafood Online</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
             margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
+            padding: 0 20px;
         }
-
         header {
-            background-color: #333;
-            color: white;
-            padding: 15px 20px;
             text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        nav a {
+            padding: 20px 0;
+            background-color: #0077b6;
             color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
+            margin-bottom: 30px;
         }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background-image: url('https://via.placeholder.com/1200x400?text=Welcome+to+StyleWear');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        h1 {
+            margin: 0;
             font-size: 2.5rem;
-            font-weight: bold;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
-
         .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
         }
-
-        .product-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+        .product {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 220px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            margin: 10px 0 5px;
+            font-size: 1.1rem;
+        }
+        .product p.price {
+            font-weight: bold;
+            color: #0077b6;
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+        }
+        .product input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .order-form {
+            max-width: 500px;
+            background: white;
             padding: 20px;
+            border-radius: 8px;
+            margin: 0 auto 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .order-form h2 {
             text-align: center;
+            margin-bottom: 20px;
+            color: #023e8a;
         }
-
-        .product-card img {
-            max-width: 100%;
-            height: auto;
+        .order-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
         }
-
-        .product-card h3 {
-            margin: 10px 0;
+        .order-form input, .order-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
         }
-
-        .product-card p {
-            color: #555;
-        }
-
-        .contact {
-            padding: 30px;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
+        .order-form button {
+            background-color: #0077b6;
             color: white;
+            font-size: 1.2rem;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .order-summary {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            background: #e0f7fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #00acc1;
+        }
+        .order-summary h3 {
+            margin-top: 0;
+            color: #007c91;
+        }
+        .order-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .order-summary ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #0097a7;
+        }
+        .order-summary ul li:last-child {
+            border-bottom: none;
+        }
+        footer {
             text-align: center;
-            padding: 15px 0;
+            color: #555;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>StyleWear</h1>
-    <p>Your Fashion, Your Way</p>
+    <h1>Fresh Seafood Market</h1>
+    <p>Buy the best seafood delivered fresh to your door in India</p>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Men</a>
-    <a href="#">Women</a>
-    <a href="#">Kids</a>
-    <a href="#">Contact</a>
-</nav>
-
-<section class="hero">
-    Discover the Latest Fashion Trends
-</section>
-
 <section class="products">
-    <div class="product-card">
-        <img src="https://via.placeholder.com/250x300?text=Men's+Jacket" alt="Men's Jacket">
-        <h3>Men's Jacket</h3>
-        <p>$59.99</p>
+    <div class="product" data-price="450">
+        <img src="https://cpimg.tistatic.com/05491717/b/4/Fresh-Salmon-Fish.jpg" />
+        <h3>Fresh Salmon</h3>
+        <p class="price">₹450 / kg</p>
+        <label>Quantity (kg):</label>
+        <input type="number" min="0" step="0.5" value="0" />
     </div>
-    <div class="product-card">
-        <img src="https://via.placeholder.com/250x300?text=Women's+Dress" alt="Women's Dress">
-        <h3>Women's Dress</h3>
-        <p>$49.99</p>
+    <div class="product" data-price="300">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_gr2evl0OWS20Uh2zXBow7G3AOM-ZKIUZR3aGrE2IFMreW1X3aO1qQ1xElWOozkcbPm8&usqp=CAU" />
+        <h3>King Prawns</h3>
+        <p class="price">₹300 / kg</p>
+        <label>Quantity (kg):</label>
+        <input type="number" min="0" step="0.5" value="0" />
     </div>
-    <div class="product-card">
-        <img src="https://via.placeholder.com/250x300?text=Kids+T-Shirt" alt="Kids T-Shirt">
-        <h3>Kids T-Shirt</h3>
-        <p>$19.99</p>
+    <div class="product" data-price="350">
+        <img src="https://fishme.com.au/cdn/shop/collections/lobsterandcrabs_1200x600_crop_center.jpg?v=1628470382" alt="Lobster" />
+        <h3>Lobster</h3>
+        <p class="price">₹350 / kg</p>
+        <label>Quantity (kg):</label>
+        <input type="number" min="0" step="0.5" value="0" />
+    </div>
+    <div class="product" data-price="250">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGfRwTJP14MOndvCBaXJ55ILcWMvcyREsJOg&s" />
+        <h3>Crab</h3>
+        <p class="price">₹250 / kg</p>
+        <label>Quantity (kg):</label>
+        <input type="number" min="0" step="0.5" value="0" />
     </div>
 </section>
 
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: support@stylewear.com</p>
-    <p>Phone: +1 234 567 8900</p>
+<section class="order-form">
+    <h2>Customer Details & Place Order</h2>
+    <form id="orderForm">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digit number" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="address">Delivery Address *</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+</section>
+
+<section class="order-summary" id="orderSummary" style="display:none;">
+    <h3>Your Order Summary</h3>
+    <ul id="orderList"></ul>
+    <p><strong>Total Amount: ₹<span id="totalAmount">0</span></strong></p>
 </section>
 
 <footer>
-    <p>&copy; 2025 StyleWear. All rights reserved.</p>
+    &copy; 2025 Fresh Seafood Market - All rights reserved
 </footer>
+
+<script>
+    const form = document.getElementById('orderForm');
+    const products = document.querySelectorAll('.product');
+    const orderSummary = document.getElementById('orderSummary');
+    const orderList = document.getElementById('orderList');
+    const totalAmountElem = document.getElementById('totalAmount');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let total = 0;
+        let orderItems = [];
+
+        products.forEach(product => {
+            const qtyInput = product.querySelector('input[type="number"]');
+            const quantity = parseFloat(qtyInput.value);
+
+            if (quantity > 0) {
+                const name = product.querySelector('h3').innerText;
+                const price = parseFloat(product.dataset.price);
+                const itemTotal = price * quantity;
+
+                orderItems.push({ name, quantity, price, itemTotal });
+                total += itemTotal;
+            }
+        });
+
+        if (orderItems.length === 0) {
+            alert('Please select at least one product quantity.');
+            return;
+        }
+
+        // Clear previous list
+        orderList.innerHTML = '';
+
+        orderItems.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.quantity} kg x ₹${item.price} = ₹${item.itemTotal.toFixed(2)}`;
+            orderList.appendChild(li);
+        });
+
+        totalAmountElem.textContent = total.toFixed(2);
+        orderSummary.style.display = 'block';
+
+        alert(`Thank you for your order, ${form.name.value}! We will contact you shortly.`);
+        form.reset();
+        products.forEach(p => p.querySelector('input[type="number"]').value = 0);
+    });
+</script>
 
 </body>
 </html>
